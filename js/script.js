@@ -1,6 +1,48 @@
 // var formHandlerEl = document.querySelector("#form-input");
 var buttonSaveEl = document.querySelector("#save-info");
 var buttonClearEl = document.querySelector("#clear-info");
+var buttonDisplayKeys = document.querySelector("#display-keys");
+
+
+
+let modalBtn = document.getElementById("modal-btn")
+let modal = document.querySelector(".modal")
+let closeBtn = document.querySelector(".close-btn")
+
+modalBtn.onclick = function(){
+  modal.style.display = "block"
+}
+
+closeBtn.onclick = function(){
+  modal.style.display = "none"
+}
+
+window.onclick = function(e){
+  if(e.target == modal){
+    modal.style.display = "none"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 var buttonHandler = function(event) {
@@ -62,6 +104,11 @@ var loadData = function() {
     document.getElementById("model").value = getData.md;
     document.getElementById("serial-number").value = getData.sn;
 
+}
+
+
+
+var displayKeys = function() {
 
 }
 
@@ -70,3 +117,4 @@ loadData();
 // formHandlerEl.addEventListener("click", buttonHandler);
 buttonSaveEl.addEventListener("click", buttonHandler);
 buttonClearEl.addEventListener("click", buttonHandler);
+buttonDisplayKeys.addEventListener("click", displayKeys);
