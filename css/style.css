@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI Light";
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid navy;
+    width: 75%;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    color: white;
+}
+
+.first-name, .last-name {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.name, .hardware, .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 85%;
+    border: 1px solid navy;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.make, .model, .serial-number {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+button {
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    border-radius: 15px;
+    letter-spacing: .75rem;
+
+}
+
+label {
+    font-size: .6rem;
+}
+
+input {
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        height: 100vh;
+    }
+
+    .main-content, .first-name, .last-name, .name, .hardware, .buttons {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .main-content, .first-name, .last-name, .name, .hardware, .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+}
